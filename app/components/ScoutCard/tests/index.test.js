@@ -4,10 +4,10 @@ import { shallow } from 'enzyme';
 import { FormattedMessage } from 'react-intl';
 import H1 from 'components/H1';
 import H4 from 'components/H4';
-import Scout from '../index';
+import ScoutCard from '../index';
 import messages from '../messages';
 
-describe('<Scout />', () => {
+describe('<ScoutCard />', () => {
   let scout;
 
   beforeEach(() => {
@@ -22,7 +22,7 @@ describe('<Scout />', () => {
   
   it('should render the scout name', () => {
     const renderedComponent = shallow(
-      <Scout scout={scout}/>
+      <ScoutCard scout={scout}/>
     );
 
     expect(renderedComponent.contains(
@@ -34,7 +34,7 @@ describe('<Scout />', () => {
 
   it('should render the scout rank', function () {
     const renderedComponent = shallow(
-      <Scout scout={scout} />
+      <ScoutCard scout={scout} />
     );
 
     expect(renderedComponent.contains(

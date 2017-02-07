@@ -13,7 +13,7 @@ import H4 from 'components/H4';
 import Wrapper from './Wrapper';
 import messages from './messages';
 
-function Scout(props) {
+function ScoutCard(props) {
   if (!props.scout) {
     return null;
   }
@@ -31,8 +31,8 @@ function Scout(props) {
   );
 }
 
-Scout.propTypes = {
+ScoutCard.propTypes = {
 
 };
 
-export default Scout;
+export default ScoutCard;
