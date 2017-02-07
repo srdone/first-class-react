@@ -14,6 +14,10 @@ import Wrapper from './Wrapper';
 import messages from './messages';
 
 function Scout(props) {
+  if (!props.scout) {
+    return null;
+  }
+  
   return (
     <Wrapper>
       <H1>

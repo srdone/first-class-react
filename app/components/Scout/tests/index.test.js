@@ -43,6 +43,14 @@ describe('<Scout />', () => {
         {': '}{scout.rank}
       </H4>
     ))
+  });
+
+  it('should not render anything if scout is undefined', function () {
+    const renderedComponent = shallow(
+      <Scout />
+    );
+
+    expect(renderedComponent.html()).toBe(null);
   })
 
 });
