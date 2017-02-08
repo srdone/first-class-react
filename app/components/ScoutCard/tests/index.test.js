@@ -14,15 +14,15 @@ describe('<ScoutCard />', () => {
     scout = {
       name: {
         first: 'Stephen',
-        last: 'Done'
+        last: 'Done',
       },
-      rank: 'Eagle'
-    }
-  })
-  
+      rank: 'Eagle',
+    };
+  });
+
   it('should render the scout name', () => {
     const renderedComponent = shallow(
-      <ScoutCard scout={scout}/>
+      <ScoutCard scout={scout} />
     );
 
     expect(renderedComponent.contains(
@@ -32,7 +32,7 @@ describe('<ScoutCard />', () => {
     )).toBe(true);
   });
 
-  it('should render the scout rank', function () {
+  it('should render the scout rank', () => {
     const renderedComponent = shallow(
       <ScoutCard scout={scout} />
     );
@@ -42,15 +42,14 @@ describe('<ScoutCard />', () => {
         <FormattedMessage {...messages.rank} />
         {': '}{scout.rank}
       </H4>
-    ))
+    ));
   });
 
-  it('should not render anything if scout is undefined', function () {
+  it('should not render anything if scout is undefined', () => {
     const renderedComponent = shallow(
-      <Scout />
+      <ScoutCard />
     );
 
     expect(renderedComponent.html()).toBe(null);
-  })
-
+  });
 });

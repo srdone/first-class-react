@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf, action } from '@kadira/storybook';
+import { storiesOf } from '@kadira/storybook';
 import ScoutCard from './index';
 
 storiesOf('ScoutCard', module)
@@ -7,10 +7,10 @@ storiesOf('ScoutCard', module)
     const scout = {
       name: {
         first: 'Stephen',
-        last: 'Done'
+        last: 'Done',
       },
-      rank: 'Eagle'
-    }
+      rank: 'Eagle',
+    };
 
-    return <ScoutCard scout={scout} />
+    return <ScoutCard scout={scout} />;
   });

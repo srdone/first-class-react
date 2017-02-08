@@ -10,6 +10,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import H1 from 'components/H1';
 import H4 from 'components/H4';
+import Header from 'components/Header';
 import Wrapper from './Wrapper';
 import messages from './messages';
 
@@ -17,12 +18,14 @@ function ScoutCard(props) {
   if (!props.scout) {
     return null;
   }
-  
+
   return (
     <Wrapper>
-      <H1>
-        {props.scout.name.first} {props.scout.name.last}
-      </H1>
+      <Header>
+        <H1>
+          {props.scout.name.first} {props.scout.name.last}
+        </H1>
+      </Header>
       <H4>
         <FormattedMessage {...messages.rank} />
         {': '}{props.scout.rank}
@@ -32,7 +35,13 @@ function ScoutCard(props) {
 }
 
 ScoutCard.propTypes = {
-
+  scout: React.PropTypes.shape({
+    name: React.PropTypes.shape({
+      first: React.PropTypes.string,
+      last: React.PropTypes.string,
+    }),
+    rank: React.PropTypes.string,
+  }),
 };
 
 export default ScoutCard;

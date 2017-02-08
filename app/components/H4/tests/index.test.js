@@ -4,7 +4,6 @@ import { shallow } from 'enzyme';
 import H4 from '../index';
 
 describe('<H4 />', () => {
-
   it('should render a prop', () => {
     const id = 'testId';
     const renderedComponent = shallow(
@@ -20,5 +19,4 @@ describe('<H4 />', () => {
     );
     expect(renderedComponent.contains(children)).toBe(true);
   });
-
 });
