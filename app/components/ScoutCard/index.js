@@ -22,9 +22,7 @@ function ScoutCard(props) {
   return (
     <Wrapper>
       <Header>
-        <H1>
-          {props.scout.name.first} {props.scout.name.last}
-        </H1>
+        {props.scout.name.first} {props.scout.name.last}
       </Header>
       <H4>
         <FormattedMessage {...messages.rank} />
