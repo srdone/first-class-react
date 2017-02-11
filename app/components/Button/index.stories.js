@@ -4,8 +4,8 @@ import Button from './index';
 
 storiesOf('Button', module)
   .add('basic', () => (
-    <Button>Test Text</Button>
+    <Button>Submit</Button>
   ))
   .add('Primary', () => (
-    <Button primary>Test Text</Button>
+    <Button primary>Submit</Button>
   ));
