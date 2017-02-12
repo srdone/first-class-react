@@ -13,6 +13,9 @@
 
 import React from 'react';
 
+import Header from 'components/Header';
+import Container from 'components/Container';
+
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
   static propTypes = {
@@ -22,7 +25,10 @@ export default class App extends React.PureComponent { // eslint-disable-line re
   render() {
     return (
       <div>
-        {React.Children.toArray(this.props.children)}
+        <Header>First Class Scouting</Header>
+        <Container>
+          {React.Children.toArray(this.props.children)}
+        </Container>
       </div>
     );
   }

@@ -42,8 +42,9 @@ import { translationMessages } from './i18n';
 import './global-styles';
 
 // Import Theme Provider and theme definition
-import ThemeProvider from 'styled-components';
-import theme from './theme';
+// Not currently working - waiting to use until necessary
+// import ThemeProvider from 'styled-components';
+// import theme from 'theme';
 
 // Import root routes
 import createRoutes from './routes';
@@ -72,17 +73,15 @@ const render = (messages) => {
   ReactDOM.render(
     <Provider store={store}>
       <LanguageProvider messages={messages}>
-        <ThemeProvider theme={theme}>
-          <Router
-            history={history}
-            routes={rootRoute}
-            render={
-              // Scroll to top when going to a new page, imitating default browser
-              // behaviour
-              applyRouterMiddleware(useScroll())
-            }
-          />
-        </ThemeProvider>
+        <Router
+          history={history}
+          routes={rootRoute}
+          render={
+            // Scroll to top when going to a new page, imitating default browser
+            // behaviour
+            applyRouterMiddleware(useScroll())
+          }
+        />
       </LanguageProvider>
     </Provider>,
     document.getElementById('app')

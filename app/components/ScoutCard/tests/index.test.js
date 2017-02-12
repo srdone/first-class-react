@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { FormattedMessage } from 'react-intl';
-import H1 from 'components/H1';
+import Header from 'components/Header';
 import H4 from 'components/H4';
 import ScoutCard from '../index';
 import messages from '../messages';
@@ -26,9 +26,9 @@ describe('<ScoutCard />', () => {
     );
 
     expect(renderedComponent.contains(
-      <H1>
+      <Header>
         {scout.name.first} {scout.name.last}
-      </H1>
+      </Header>
     )).toBe(true);
   });
 

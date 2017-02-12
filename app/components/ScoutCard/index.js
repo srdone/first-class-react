@@ -8,7 +8,6 @@ import React from 'react';
 // import styled from 'styled-components';
 
 import { FormattedMessage } from 'react-intl';
-import H1 from 'components/H1';
 import H4 from 'components/H4';
 import Header from 'components/Header';
 import Wrapper from './Wrapper';
