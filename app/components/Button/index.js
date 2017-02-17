@@ -9,7 +9,7 @@ import styled from 'styled-components';
 const Button = styled.button`
   border: 1px solid black;
   border-radius: .2em;
-  padding: .8em;
+  padding: .8em 1.5em;
   font-size: .7em;
   font-family: 'Lato', sans-serif;
   font-weight: 600;
