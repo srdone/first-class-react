@@ -11,12 +11,31 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+
+import Label from 'components/Label';
+import Input from 'components/Input';
+import Button from 'components/Button';
+import ButtonGroup from 'components/ButtonGroup';
+
 import messages from './messages';
+import Wrapper from './Wrapper';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <FormattedMessage {...messages.header} />
+      <Wrapper>
+        <Label for="username">
+          <FormattedMessage {...messages.username} />
+        </Label>
+        <Input name="username" />
+        <Label for="password">
+          <FormattedMessage {...messages.password} />
+        </Label>
+        <Input name="password" type="password" />
+        <ButtonGroup>
+          <Button primary>Log In</Button>
+        </ButtonGroup>
+      </Wrapper>
     );
   }
 }

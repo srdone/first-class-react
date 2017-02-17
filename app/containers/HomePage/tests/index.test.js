@@ -6,12 +6,21 @@ import HomePage from '../index';
 import messages from '../messages';
 
 describe('<HomePage />', () => {
-  it('should render the page message', () => {
+  it('should render the username message', () => {
     const renderedComponent = shallow(
       <HomePage />
     );
     expect(renderedComponent.contains(
-      <FormattedMessage {...messages.header} />
+      <FormattedMessage {...messages.username} />
+    )).toEqual(true);
+  });
+
+  it('should render the password message', () => {
+    const renderedComponent = shallow(
+      <HomePage />
+    );
+    expect(renderedComponent.contains(
+      <FormattedMessage {...messages.password} />
     )).toEqual(true);
   });
 });
