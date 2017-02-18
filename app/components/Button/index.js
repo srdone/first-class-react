@@ -19,10 +19,16 @@ const Button = styled.button`
   background-color: ${(props) => props.primary ? props.theme.primary : props.theme.default};
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   cursor: pointer;
+  outline: none;
 
   &:hover {
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
     background-color: ${(props) => props.primary ? props.theme.primaryHovered : props.theme.defaultHovered};
+  }
+
+  &:active {
+    box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+    background-color: ${(props) => props.primary ? props.theme.primaryActive : props.theme.defaultActive};
   }
 `;
 
