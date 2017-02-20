@@ -24,7 +24,7 @@ import {
   makeSelectCurrentUser,
   makeSelectLoading,
   makeSelectError,
-  makeSelectLoggedIn
+  makeSelectLoggedIn,
 } from 'containers/App/selectors';
 
 import { changeUsername, changePassword } from './actions';
@@ -44,15 +44,17 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <Input
             id="username"
             value={this.props.username}
-            onChange={this.props.onChangeUsername} />
+            onChange={this.props.onChangeUsername}
+          />
           <Label htmlFor="password">
             <FormattedMessage {...messages.password} />
           </Label>
-          <Input 
+          <Input
             id="password"
             type="password"
             value={this.props.password}
-            onChange={this.props.onChangePassword} />
+            onChange={this.props.onChangePassword}
+          />
           <ButtonGroup>
             <Button primary type="submit">Log In</Button>
           </ButtonGroup>
@@ -66,19 +68,19 @@ HomePage.propTypes = {
   loading: React.PropTypes.bool,
   error: React.PropTypes.oneOfType([
     React.PropTypes.object,
-    React.PropTypes.bool
+    React.PropTypes.bool,
   ]),
   loggedIn: React.PropTypes.bool,
   currentUser: React.PropTypes.oneOfType([
     React.PropTypes.string,
-    React.PropTypes.bool
+    React.PropTypes.bool,
   ]),
   onSubmitForm: React.PropTypes.func,
   username: React.PropTypes.string,
   onChangeUsername: React.PropTypes.func,
   password: React.PropTypes.string,
   onChangePassword: React.PropTypes.func,
-}
+};
 
 export function mapDispatchToProps(dispatch) {
   return {
@@ -89,8 +91,8 @@ export function mapDispatchToProps(dispatch) {
         evt.preventDefault();
       }
       dispatch(login());
-    }
-  }
+    },
+  };
 }
 
 const mapStateToProps = createStructuredSelector({

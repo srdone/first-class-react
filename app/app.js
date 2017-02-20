@@ -15,6 +15,7 @@ import { Provider } from 'react-redux';
 import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { useScroll } from 'react-router-scroll';
+import { ThemeProvider } from 'styled-components';
 import 'sanitize.css/sanitize.css';
 
 // Import root app
@@ -41,9 +42,8 @@ import { translationMessages } from './i18n';
 // Import CSS reset and Global Styles
 import './global-styles';
 
-// Import Theme Provider and theme definition
-import  { ThemeProvider } from 'styled-components';
-import theme from 'theme';
+// Import theme definition
+import theme from './theme';
 
 // Import root routes
 import createRoutes from './routes';

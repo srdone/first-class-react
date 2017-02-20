@@ -14,12 +14,12 @@ import { fromJS } from 'immutable';
 
 import {
   CHANGE_PASSWORD,
-  CHANGE_USERNAME
+  CHANGE_USERNAME,
 } from './constants';
 
 const initialState = fromJS({
   username: '',
-  password: ''
+  password: '',
 });
 
 function homeReducer(state = initialState, action) {

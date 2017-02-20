@@ -18,7 +18,7 @@
 import {
   LOGIN,
   LOGIN_ERROR,
-  LOGIN_SUCCESS
+  LOGIN_SUCCESS,
 } from './constants';
 
 /**
@@ -36,15 +36,15 @@ export function login() {
  * Dispatched when the repositories are loaded by the request saga
  *
  * @param  {string} username The current username
- * 
- * @param {string} key The server auth key 
+ *
+ * @param {string} key The server auth key
  *
  * @return {object}      An action object with a type of LOGIN_SUCCESS passing the repos
  */
 export function loginSuccess(username, key) {
   return {
     type: LOGIN_SUCCESS,
-    repos,
+    key,
     username,
   };
 }

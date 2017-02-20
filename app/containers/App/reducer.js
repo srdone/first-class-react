@@ -36,11 +36,11 @@ function appReducer(state = initialState, action) {
     case LOGIN_ERROR:
       return state
         .set('error', action.error)
-        .set('loading', false)
+        .set('loading', false);
     case LOGIN_SUCCESS:
       return state
         .set('loading', false)
-        .set('currentUser', action.username)
+        .set('currentUser', action.username);
     default:
       return state;
   }

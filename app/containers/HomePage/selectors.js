@@ -19,5 +19,5 @@ const makeSelectPassword = () => createSelector(
 export {
   selectHome,
   makeSelectUsername,
-  makeSelectPassword
-}
+  makeSelectPassword,
+};
