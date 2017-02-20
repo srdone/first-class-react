@@ -1,5 +1,5 @@
 /*
- * AppConstants
+ * HomeConstants
  * Each action has a corresponding type, which the reducer knows and picks up on.
  * To avoid weird typos between the reducer and the actions, we save them as
  * constants here. We prefix them with 'yourproject/YourComponent' so we avoid
@@ -9,7 +9,5 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const DEFAULT_LOCALE = 'en';
-export const LOGIN = 'firstclassscouting/HomePage/LOGIN';
-export const LOGIN_SUCCESS = 'firstclassscouting/HomePage/LOGIN_SUCCESS';
-export const LOGIN_ERROR = 'firstclassscouting/HomePage/LOGIN_ERROR';
+export const CHANGE_USERNAME = 'firstclassscouting/HomePage/CHANGE_USERNAME';
+export const CHANGE_PASSWORD = 'firstclassscouting/HomePage/CHANGE_PASSWORD';

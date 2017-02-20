@@ -24,8 +24,4 @@ const Input = styled.input`
   }
 `;
 
-Input.propTypes = {
-
-};
-
 export default Input;
