@@ -10,6 +10,6 @@
  */
 
 export const DEFAULT_LOCALE = 'en';
-export const LOGIN = 'firstclassscouting/HomePage/LOGIN';
-export const LOGIN_SUCCESS = 'firstclassscouting/HomePage/LOGIN_SUCCESS';
-export const LOGIN_ERROR = 'firstclassscouting/HomePage/LOGIN_ERROR';
+export const LOGIN = 'firstclassscouting/App/LOGIN';
+export const LOGIN_SUCCESS = 'firstclassscouting/App/LOGIN_SUCCESS';
+export const LOGIN_ERROR = 'firstclassscouting/App/LOGIN_ERROR';

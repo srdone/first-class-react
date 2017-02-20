@@ -35,6 +35,13 @@ import Wrapper from './Wrapper';
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
+    if (this.props.loggedIn) {
+      return (
+        <div>
+          <FormattedMessage {...messages.loggedIn} />{this.props.currentUser}
+        </div>
+      );
+    }
     return (
       <form onSubmit={this.props.onSubmitForm}>
         <Wrapper>
@@ -58,6 +65,9 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <ButtonGroup>
             <Button primary type="submit">Log In</Button>
           </ButtonGroup>
+          {this.props.loading &&
+            <FormattedMessage {...messages.loading} />}
+          {this.props.error && <span>{this.props.error.message}</span>}
         </Wrapper>
       </form>
     );

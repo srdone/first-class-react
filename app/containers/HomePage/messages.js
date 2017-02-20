@@ -14,4 +14,12 @@ export default defineMessages({
     id: 'app.components.HomePage.password',
     defaultMessage: 'Password',
   },
+  loading: {
+    id: 'app.components.HomePage.loading',
+    defaultMessage: 'Loading...',
+  },
+  loggedIn: {
+    id: 'app.components.HomePage.loggedIn',
+    defaultMessage: 'Logged in as: ',
+  },
 });
